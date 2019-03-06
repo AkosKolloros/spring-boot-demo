@@ -11,8 +11,12 @@ import java.util.List;
 public class DogStorage {
     private List<Dog> dogs = new LinkedList<>();
 
-    @Autowired
     private DogCreator dogCreator;
+
+    @Autowired
+    public DogStorage(DogCreator dogCreator) {
+        this.dogCreator = dogCreator;
+    }
 
     public Dog addRandomDog() {
         Dog randomDog = dogCreator.createRandomDog();

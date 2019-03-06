@@ -1,7 +1,10 @@
 package com.codecool.springbootdemo.model;
 
+import javax.validation.constraints.NotEmpty;
+
 public class Dog {
     private Breed breed;
+    @NotEmpty
     private String name;
     private Integer age;
 
